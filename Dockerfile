@@ -1,4 +1,5 @@
 FROM ubuntu:14.04
+MAINTAINER Joris Schalk
 
 RUN dpkg --add-architecture i386
 RUN apt-get install -y software-properties-common && add-apt-repository -y ppa:ubuntu-wine/ppa
