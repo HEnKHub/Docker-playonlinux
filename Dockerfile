@@ -30,7 +30,8 @@ RUN export uid=1000 gid=1000 && \
     echo "gamer:x:${uid}:" >> /etc/group && \
     echo "gamer ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/gamer && \
     chmod 0440 /etc/sudoers.d/gamer && \
-    chown ${uid}:${gid} -R /home/gamer
+    chown ${uid}:${gid} -R /home/gamer &&\
+    usermod -a -G video gamer
 
 #Use created user
 USER gamer
